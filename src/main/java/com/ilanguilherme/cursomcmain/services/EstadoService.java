@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.ilanguilherme.cursomcmain.domain.Estado;
 import com.ilanguilherme.cursomcmain.repositories.EstadoRepository;
 import com.ilanguilherme.cursomcmain.services.exceptions.ObjectNotFoundException;
+import java.util.List;
+
 
 @Service
 public class EstadoService {
@@ -20,6 +22,10 @@ public class EstadoService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				"Objeto não encotrando! ID: " + id + ", Tipo: " + Estado.class.getName()
 			) );
+	}
+	
+	public List<Estado> buscarTodos(){
+		return repo.findAll();
 	}
 
 }
