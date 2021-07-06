@@ -1,7 +1,9 @@
 package com.ilanguilherme.cursomcmain.domain;
 
-import com.ilanguilherme.cursomcmain.domain.enums.EstadoPagamento;
+import javax.persistence.Entity;
 
+import com.ilanguilherme.cursomcmain.domain.enums.EstadoPagamento;
+@Entity
 public class PagamentoComCartao extends Pagamento {
 	
 	private static final long serialVersionUID = 1L;
